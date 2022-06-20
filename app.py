@@ -5,7 +5,7 @@ from sentence_transformers import SentenceTransformer, util
 
 model = SentenceTransformer("dbmdz/bert-base-turkish-uncased")
 embeddings = torch.load("proverb_embeddings.pt")
-df = pd.read_csv("atasozleri-vk.csv", index_col=[0])
+df = pd.read_csv("atasozleri-vk.csv", index_col=[0], na_filter=False)
 
 st.set_page_config(
     page_title="Türkçe Atasözü Önerici",
