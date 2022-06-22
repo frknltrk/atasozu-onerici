@@ -8,8 +8,8 @@ st.set_page_config(
   page_icon="🎈",
 )
 
-@st.cache
-def load_model(allow_output_mutation=True):
+@st.cache(allow_output_mutation=True)
+def load_model():
   return SentenceTransformer("dbmdz/bert-base-turkish-uncased")
 
 @st.cache
